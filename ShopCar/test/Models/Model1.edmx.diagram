@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f354d1bf412e40f8b8de125a3b10ff52" Name="Diagram1">
+        <EntityTypeShape EntityType="CarShopModel.Admin" Width="1.5" PointX="5.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.CTHoaDon" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.CTPhieuNhap" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.HoaDon" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.KhachHang" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.LoaiSP" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.NhaCC" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.PhieuNhap" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.Quyen" Width="1.5" PointX="5.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.QuyenAd" Width="1.5" PointX="8" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.SanPham" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.Tintuc" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="CarShopModel.FK__QuyenAd__MaAdmin__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK__CTHoaDon__MaHD__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK__CTHoaDon__MaSP__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK__CTPhieuNha__MaPN__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK__CTPhieuNha__MaSP__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK__HoaDon__MaKH__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK__SanPham__MaLoaiS__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK__PhieuNhap__MaNCC__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="CarShopModel.FK__QuyenAd__MaQuyen__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
