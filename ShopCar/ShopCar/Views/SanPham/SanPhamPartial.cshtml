@@ -1,0 +1,64 @@
+﻿@using ShopCar.Model;
+@model IEnumerable<SanPham>
+
+    <div class="row shop_wrapper" style="margin:30px 0;">
+        @foreach (var item in Model.Take(4))
+        {
+            <div class="col-lg-3 col-md-4 col-12 ">
+                <article class="single_product">
+                    <figure>
+                        <div class="product_thumb">
+                            <a class="primary_img" href="product-details.html">
+                                <img src="~/images/@item.URLAnh" style="width:100%;height:350px;" alt="">
+                            </a>
+                            @*<div class="label_product">
+                                <span class="label_sale">-56%</span>
+                            </div>*@
+                            <div class="quick_button">
+                                <a href="#" data-toggle="modal" data-target="#modal_box" title="quick view">
+                                <i class="fa fa-cart-plus" style="font-size:40px;padding:10px"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product_content grid_content">
+                            <div class="product_content_inner">
+                                <p class="manufacture_product"><a href="#">Hàng mới</a></p>
+                                <h4 class="product_name"><a href="product-details.html">@item.TenSP</a></h4>
+                                <div class="product_rating">
+                                    <ul>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="price_box">
+                                    @*<span class="old_price">$320.00</span>*@
+                                    <span class="current_price">@item.DonGia.Value.ToString("#,##")</span>
+                                </div>
+                            </div>
+                            <div class="action_links">
+                                <ul>
+                                    <li class="add_to_cart"><a href="cart.html" title="" data-original-title="Add to cart">Thêm vào giỏ hàng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+            </div>
+        }
+    </div>
+<style>
+    .quick_button a {
+        font-size: 18px;
+        width: 60px;
+        height: 60px;
+        line-height: 40px;
+        display: inline-block;
+        text-align: center;
+        background: #C70909;
+        color: #ffffff;
+        border-radius: 2px;
+    }
+</style>

@@ -3721,8 +3721,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .quick_button a {
   font-size: 18px;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   line-height: 40px;
   display: inline-block;
   text-align: center;
