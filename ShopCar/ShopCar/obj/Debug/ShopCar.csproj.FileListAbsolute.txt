@@ -74,3 +74,7 @@ G:\TTNhom\công nghệ web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csp
 G:\TTNhom\công nghệ web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csproj.CopyComplete
 G:\TTNhom\công nghệ web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.dll
 G:\TTNhom\công nghệ web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.pdb
+G:\TTNhom\công nghệ web\NiemTinVaHyVong\ShopCar\ShopCar\bin\EntityFramework.dll
+G:\TTNhom\công nghệ web\NiemTinVaHyVong\ShopCar\ShopCar\bin\EntityFramework.SqlServer.dll
+G:\TTNhom\công nghệ web\NiemTinVaHyVong\ShopCar\ShopCar\bin\EntityFramework.xml
+G:\TTNhom\công nghệ web\NiemTinVaHyVong\ShopCar\ShopCar\bin\EntityFramework.SqlServer.xml

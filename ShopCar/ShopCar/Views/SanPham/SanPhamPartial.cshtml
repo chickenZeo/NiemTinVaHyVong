@@ -1,0 +1,84 @@
+﻿@using ShopCar.Model;
+@model IEnumerable<SanPham>
+
+    <div class="row shop_wrapper">
+        @foreach (var item in Model.Take(4))
+        {
+            <div class="col-lg-3 col-md-4 col-12 ">
+                <article class="single_product">
+                    <figure>
+                        <div class="product_thumb">
+                            <a class="primary_img" href="product-details.html"><img src="~/images/@item.URLAnh"  style="height:350px;width:100%;" alt=""></a>
+                            
+                            @*<div class="label_product">
+                                <span class="label_sale">-56%</span>
+                            </div>*@
+                            <div class="quick_button">
+                                <a href="#" data-toggle="modal" data-target="#modal_box" title="quick view">
+                                     <i class="fa fa-cart-plus" style="font-size:40px; padding:10px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product_content grid_content">
+                            <div class="product_content_inner">
+                                <p class="manufacture_product">Hàng Mới</p>
+                                <h4 class="product_name"><a href="product-details.html">@item.TenSP</a></h4>
+                                <div class="product_rating">
+                                    <ul>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="price_box">
+                                    @*<span class="old_price">$320.00</span>*@
+                                    <span class="current_price">@item.DonGia.Value.ToString("#,##")</span>
+                                </div>
+                            </div>
+                            <div class="action_links">
+                                <ul>
+                                    <li class="add_to_cart"><a href="cart.html" title="" data-original-title="Add to cart">Thêm vào giỏ hàng</a></li>
+                                    @*<li class="wishlist"><a href="wishlist.html" title="" data-original-title="Add to Wishlist"><i class="icon-heart"></i></a></li>
+                                    <li class="compare"><a href="#" title="" data-original-title="Add to Compare"><i class="icon-rotate-cw"></i></a></li>*@
+                                </ul>
+                            </div>
+                        </div>
+                        @*<div class="product_content list_content">
+                            <div class="left_caption">
+                                <p class="manufacture_product"><a href="#">Parts</a></p>
+                                <h4 class="product_name"><a href="product-details.html">Nunc Neque Eros</a></h4>
+                                <div class="product_rating">
+                                    <ul>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="price_box">
+                                    <span class="old_price">$320.00</span>
+                                    <span class="current_price">$120.00</span>
+                                </div>
+                                <div class="product_desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco,Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus</p>
+                                </div>
+                            </div>
+                            <div class="right_caption">
+                                <p class="text_available">Availability: <span>In Stock</span></p>
+                                <div class="action_links">
+                                    <ul>
+                                        <li class="add_to_cart"><a href="cart.html" title="" data-original-title="Add to cart">Add to cart</a></li>
+                                        <li class="wishlist"><a href="wishlist.html" title="" data-original-title="Add to Wishlist"><i class="icon-heart"></i>  Add to Wishlist</a></li>
+                                        <li class="compare"><a href="#" title="" data-original-title="compare"><i class="icon-rotate-cw"></i>Add to Compare</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>*@
+                    </figure>
+                </article>
+            </div>
+        }
+    </div>

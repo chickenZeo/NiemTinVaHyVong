@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="~/Content/assets/css/plugins.css">
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+    <link rel="stylesheet" href="~/Content/assets/css/style1.css">
+
+
+</head>
+
+<body>
+    <div class="off_canvars_overlay">
+
+    </div>
+    <div class="offcanvas_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="canvas_open">
+                        <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                    </div>
+                    <div class="offcanvas_menu_wrapper">
+                        <div class="canvas_close">
+                            <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                        </div>
+                        <div class="call_support">
+                            <p><i class="icon-phone-call" aria-hidden="true"></i> <span>Hotline: <a href="tel:0123456789">0123 456 789</a></span></p>
+
+                        </div>
+                        <div class="header_top_links">
+                            <ul>
+                                <li><a href="login.html">Đăng ký</a></li>
+                                <li><a href="login.html">Đăng nhập</a></li>
+                                <li><a href="cart.html">Giỏ hàng</a></li>
+                                <li><a href="checkout.html">Thanh toán</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_container">
+                            <form action="#">
+                                <div class="hover_category">
+                                    <select class="select_option" name="select" id="categori1">
+                                        <option selected value="1">Tất cả danh mục</option>
+                                        <option value="2">Nột thất</option>
+                                        <option value="3">Động cơ</option>
+                                        <option value="4">Phụ kiện</option>
+                                        <option value="5">Thiết bị thông minh</option>
+                                        <option value="6">Thân xe</option>
+                                        <option value="7">Đèn</option>
+                                    </select>
+                                </div>
+                                <div class="search_box">
+                                    <input placeholder="Tìm kiếm sản phẩm..." type="text">
+                                    <button type="submit">Tìm kiếm</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="header_configure_area">
+                            <div class="header_wishlist">
+                                <a href="wishlist.html">
+                                    <i class="icon-heart"></i>
+                                    <span class="wishlist_count">3</span>
+                                </a>
+                            </div>
+                            <div class="mini_cart_wrapper">
+                                <a href="javascript:void(0)">
+                                    <i class="icon-shopping-bag2"></i>
+                                    <span class="cart_price">$152.00 <i class="ion-ios-arrow-down"></i></span>
+                                    <span class="cart_count">2</span>
+                                </a>
+                                <!--mini cart-->
+                                <div class="mini_cart">
+                                    <div class="mini_cart_inner">
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="~/Content/images/s-product/product.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Fusce Aliquam</a>
+                                                <p>Số lượng: 1 X <span> $60.00 </span></p>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="../images/s-product/product2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Ras Neque Metus</a>
+                                                <p>Số lượng: 1 X <span> $60.00 </span></p>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="mini_cart_table">
+                                            <div class="cart_total">
+                                                <span>Phụ thu:</span>
+                                                <span class="price">$0</span>
+                                            </div>
+                                            <div class="cart_total mt-10">
+                                                <span>Tổng:</span>
+                                                <span class="price">$138.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mini_cart_footer">
+                                        <div class="cart_button">
+                                            <a href="cart.html">Đến giỏ hàng</a>
+                                        </div>
+                                        <div class="cart_button">
+                                            <a href="checkout.html">Thanh toán</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--mini cart end-->
+                            </div>
+                        </div>
+                        <div id="menu" class="text-left ">
+                            <ul class="offcanvas_main_menu">
+                                <li class="menu-item-has-children active">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Shop</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="my-account.html">Tài khoản của tôi</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="about.html">Về chúng tôi</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="contact.html"> Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas_footer">
+                            <span><a href="#"><i class="fa fa-envelope-o"></i> youremail@email.com</a></span>
+                            <ul>
+                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--offcanvas menu area end-->
+
+    <header>
+        @Html.Partial("~/Views/LayOutPage/HeaderPartial.cshtml")
+        <!--header top start-->
+        <!--header middel start-->
+        <div class="header_middle">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="#">
+                                <h1 style=" color: #D23A3A; display: inline">G</h1>
+                                <h1 style=" color:#FFFFFF ; display : inline; padding-right: 10px">15</h1>
+                                <h1 style=" color: #FFFFFF; display: inline">Auto</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="header_right_box">
+                            <div class="search_container">
+                                <form action="#">
+                                    <div class="hover_category">
+                                        <select class="select_option" name="select" id="categori2">
+                                            <option selected value="1">Tất cả danh mục</option>
+                                            <option value="2">Nột thất</option>
+                                            <option value="3">Động cơ</option>
+                                            <option value="4">Phụ kiện</option>
+                                            <option value="5">Thiết bị thông minh</option>
+                                            <option value="6">Thân xe</option>
+                                            <option value="7">Đèn</option>
+                                        </select>
+                                    </div>
+                                    <div class="search_box">
+                                        <input placeholder="Tìm kiếm sản phẩm..." type="text">
+                                        <button type="submit">Tìm kiếm</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="header_configure_area">
+                                <div class="header_wishlist">
+                                    <a href="wishlist.html">
+                                        <i class="icon-heart"></i>
+                                        <span class="wishlist_count">3</span>
+                                    </a>
+                                </div>
+                                <div class="mini_cart_wrapper">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon-shopping-bag2"></i>
+                                        <span class="cart_price">$152.00 <i class="ion-ios-arrow-down"></i></span>
+                                        <span class="cart_count">2</span>
+                                    </a>
+                                    <!--mini cart-->
+                                    <div class="mini_cart">
+                                        <div class="mini_cart_inner">
+                                            <div class="cart_item">
+                                                <div class="cart_img">
+                                                    <a href="#"><img src="../images/s-product/product.jpg" alt=""></a>
+                                                </div>
+                                                <div class="cart_info">
+                                                    <a href="#">Fusce Aliquam</a>
+                                                    <p>Số lượng: 1 X <span> $60.00 </span></p>
+                                                </div>
+                                                <div class="cart_remove">
+                                                    <a href="#"><i class="ion-android-close"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="cart_item">
+                                                <div class="cart_img">
+                                                    <a href="#"><img src="../images/s-product/product2.jpg" alt=""></a>
+                                                </div>
+                                                <div class="cart_info">
+                                                    <a href="#">Ras Neque Metus</a>
+                                                    <p>Số lượng: 1 X <span> $60.00 </span></p>
+                                                </div>
+                                                <div class="cart_remove">
+                                                    <a href="#"><i class="ion-android-close"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="mini_cart_table">
+                                                <div class="cart_total">
+                                                    <span>Phụ thu:</span>
+                                                    <span class="price">$0</span>
+                                                </div>
+                                                <div class="cart_total mt-10">
+                                                    <span>Tổng:</span>
+                                                    <span class="price">$138.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mini_cart_footer">
+                                            <div class="cart_button">
+                                                <a href="cart.html">Đến giỏ hàng</a>
+                                            </div>
+                                            <div class="cart_button">
+                                                <a href="checkout.html">Thanh toán</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--mini cart end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header middel end-->
+        <!--header bottom satrt-->
+        <div class="header_bottom sticky-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="main_menu menu_position text-left">
+                            <nav>
+                                <ul>
+                                    <li><a class="active" href="Home.html">Trang chủ</a></li>
+                                    <li class="mega_items"><a href="product.html">Sản phẩm </a>
+                                    <li><a href="#">Về chúng tôi</a></li>
+                                    <li><a href="#"> Liên hệ</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="call_support text-right">
+                            <p><i class="icon-phone-call" aria-hidden="true"></i> <span>Hotline: <a href="tel:0123456789">0123456789</a></span></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--header bottom end-->
+        </div>
+    </header>
+    <div class="top_tags_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tags_content">
+                        <ul>
+                            <li><span>Top tìm kiếm:</span></li>
+                            <li><a href="#">Sửa chữa</a></li>
+                            <li><a href="#">Thân xe</a></li>
+                            <li><a href="#">Nội thất</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="owl-item active" style="width: 100%;">
+        <div class="single_slider d-flex align-items-center" style="background-image: url(/Content/assets/img/slider/slider5.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="welcome_title" style="margin:30px 0;color:#ffff;text-align:left;">
+                            <h1>WELCOME TO G15 AUTO</h1>
+                            <h2>MUA HÀNG <span>THEO CÁCH CỦA BẠN</span></h2>
+                            <h2>CAM KẾT <span> UY TÍN CHẤT LƯỢNG </span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div style="margin: 20px 0;">
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h3>GIỚI THIỆU</h3>
+                    <a href=""><i class="fa fa-angle-right">Về chúng tôi</i></a><br>
+                    <a href=""><i class="fa fa-angle-right">Cam kết chất lượng</i></a><br>
+                    <a href=""><i class="fa fa-angle-right">Liên hệ</i></a><br>
+                    <a href=""><i class="fa fa-angle-right">Hướng dẫn mua hàng</i></a><br>
+                    <a href=""><i class="fa fa-angle-right">Vận chuyển và thanh toán</i></a><br>
+                    <a href=""><i class="fa fa-angle-right">Chính sách bảo hành</i></a><br>
+                </div>
+                <div class="col-4">
+                    <h3>THÔNG TIN LIÊN HỆ</h3>
+                    <a href=""><i class="fa fa-windows icon"></i>  Tên công ty</a><br>
+                    <a href=""><i class="fa fa-map-marker icon"></i>  Địa chỉ</i></a><br>
+                    <a href=""><i class="fa fa-phone icon"></i>  Liên hệ</a><br>
+                    <a href=""><i class="fa fa-globe icon"></i>  Tên trang web</a><br>
+                    <a href=""><i class="fa fa-envelope icon"></i>  Email</a><br>
+                </div>
+                <div class="col-4 icon">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+                    <h4>All buiding by mr.Quan</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-6 icon">
+
+            </div>
+
+        </div>
+    </footer>
+    <style>
+        .quick_button a {
+            font-size: 18px;
+            width: 60px;
+            height: 60px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            background: #C70909;
+            color: #ffffff;
+            border-radius: 2px;
+        }
+    </style>
+    <!--footer-->
+    <script src="~/Content/assets/js/plugins.js"></script>
+
+    <!-- Main JS -->
+    <script src="~/Content/assets/js/main.js"></script>
+</body>
+
+</html>

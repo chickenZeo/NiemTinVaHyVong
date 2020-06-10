@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4401987d8d914048ad43f0595120924d" Name="Diagram1">
-        <EntityTypeShape EntityType="CarShopModel.Admin" Width="1.5" PointX="5.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.Admin" Width="1.5" PointX="6.375" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CarShopModel.CTHoaDon" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="CarShopModel.CTPhieuNhap" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CarShopModel.HoaDon" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
@@ -13,8 +13,8 @@
         <EntityTypeShape EntityType="CarShopModel.LoaiSP" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="CarShopModel.NhaCC" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="CarShopModel.PhieuNhap" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CarShopModel.Quyen" Width="1.5" PointX="5.75" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CarShopModel.QuyenAd" Width="1.5" PointX="8" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.Quyen" Width="1.5" PointX="6.625" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarShopModel.QuyenAd" Width="1.5" PointX="8.625" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="CarShopModel.SanPham" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CarShopModel.Tintuc" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
         <AssociationConnector Association="CarShopModel.FK__QuyenAd__MaAdmin__3F466844" ManuallyRouted="false" />
