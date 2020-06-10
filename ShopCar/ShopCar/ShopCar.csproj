@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -186,6 +187,56 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AssetsAdmin\css\style-starter.css" />
+    <Content Include="Assets\AssetsAdmin\font\fontawesome-webfont.svg" />
+    <Content Include="Assets\AssetsAdmin\images\avatar1.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\avatar2.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\avatar3.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\avatar4.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\avatar5.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\avatar6.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\avatar7.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\cart.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\content.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\dashboard.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\desk.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\down.png" />
+    <Content Include="Assets\AssetsAdmin\images\logo.png" />
+    <Content Include="Assets\AssetsAdmin\images\people1.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\people2.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\people3.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\people4.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\Preloader_11.gif" />
+    <Content Include="Assets\AssetsAdmin\images\profileimg-big.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\profileimg.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\sort_asc.png" />
+    <Content Include="Assets\AssetsAdmin\images\sort_both.png" />
+    <Content Include="Assets\AssetsAdmin\images\sort_desc.png" />
+    <Content Include="Assets\AssetsAdmin\images\team.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\team2.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\team3.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\team4.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\template1.jpg" />
+    <Content Include="Assets\AssetsAdmin\images\template2.jpg" />
+    <Content Include="Assets\AssetsAdmin\js\bar.js" />
+    <Content Include="Assets\AssetsAdmin\js\bootstrap.min.js" />
+    <Content Include="Assets\AssetsAdmin\js\Chart.min.js" />
+    <Content Include="Assets\AssetsAdmin\js\jquery-1.10.2.min.js" />
+    <Content Include="Assets\AssetsAdmin\js\jquery-3.3.1.min.js" />
+    <Content Include="Assets\AssetsAdmin\js\jquery.nicescroll.js" />
+    <Content Include="Assets\AssetsAdmin\js\linechart.js" />
+    <Content Include="Assets\AssetsAdmin\js\modernizr.js" />
+    <Content Include="Assets\AssetsAdmin\js\scripts.js" />
+    <Content Include="Assets\AssetsAdmin\js\utils.js" />
+    <Content Include="Assets\AssetsClient\css\plugins.css" />
+    <Content Include="Assets\AssetsClient\css\style.css" />
+    <Content Include="Assets\AssetsClient\css\style1.css" />
+    <Content Include="Assets\AssetsClient\font\fontawesome-webfont3e6e.svg" />
+    <Content Include="Assets\AssetsClient\font\ionicons28b5.svg" />
+    <Content Include="Assets\AssetsClient\font\plaza-icon56cc.svg" />
+    <Content Include="Assets\AssetsClient\js\main.js" />
+    <Content Include="Assets\AssetsClient\js\map.js" />
+    <Content Include="Assets\AssetsClient\js\plugins.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -299,12 +350,32 @@
     <Content Include="Model\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Assets\AssetsClient\font\fontawesome-webfont3e6e.eot" />
+    <Content Include="Assets\AssetsClient\font\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Assets\AssetsClient\font\fontawesome-webfont3e6e.woff" />
+    <Content Include="Assets\AssetsClient\font\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Assets\AssetsClient\font\fontawesome-webfontd41d.eot" />
+    <Content Include="Assets\AssetsClient\font\ionicons28b5.eot" />
+    <Content Include="Assets\AssetsClient\font\ionicons28b5.ttf" />
+    <Content Include="Assets\AssetsClient\font\ionicons28b5.woff" />
+    <Content Include="Assets\AssetsClient\font\Material-Design-Iconic-Fontd1f1.ttf" />
+    <Content Include="Assets\AssetsClient\font\Material-Design-Iconic-Fontd1f1.woff" />
+    <Content Include="Assets\AssetsClient\font\Material-Design-Iconic-Fontd1f1.woff2" />
+    <Content Include="Assets\AssetsClient\font\plaza-icon56cc.eot" />
+    <Content Include="Assets\AssetsClient\font\plaza-icon56cc.ttf" />
+    <Content Include="Assets\AssetsClient\font\plaza-icon56cc.woff" />
+    <Content Include="Assets\AssetsAdmin\font\fontawesome-webfont.eot" />
+    <Content Include="Assets\AssetsAdmin\font\fontawesome-webfont.ttf" />
+    <Content Include="Assets\AssetsAdmin\font\fontawesome-webfont.woff" />
+    <Content Include="Assets\AssetsAdmin\font\fontawesome-webfont.woff2" />
+    <Content Include="Assets\AssetsAdmin\font\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -320,10 +391,12 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
