@@ -1,0 +1,12 @@
+﻿@using ShopCar.Model;
+@model IEnumerable<LoaiSP>
+
+    <div class="hover_category">
+        <select class="select_option" name="select" id="categori2">
+            <option selected value="1">Tất cả danh mục</option>
+            @foreach (var item in Model)
+            {
+                <option value="@item.MaLoaiSP">@item.TenLoai</option>
+            }
+        </select>
+    </div>

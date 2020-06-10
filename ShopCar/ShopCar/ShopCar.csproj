@@ -372,6 +372,7 @@
     <Content Include="Content\assets\img\slider\slider6.jpg" />
     <Content Include="Content\assets\img\slider\slider7.jpg" />
     <Content Include="Content\assets\img\slider\slider8.jpg" />
+    <Content Include="Content\assets\js\jquery.min.js" />
     <Content Include="Content\assets\js\main.js" />
     <Content Include="Content\assets\js\map.js" />
     <Content Include="Content\assets\js\plugins.js" />
@@ -549,6 +550,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -567,6 +570,8 @@
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\SanPham\SanPhamPartial.cshtml" />
+    <Content Include="Views\Shared\HeaderTopPartial.cshtml" />
+    <Content Include="Views\Home\MenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

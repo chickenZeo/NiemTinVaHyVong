@@ -1,54 +1,108 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CarShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CarShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="CarShopModel.Admin" />
+    <EntitySet Name="CTHoaDons" EntityType="CarShopModel.CTHoaDon" />
+    <EntitySet Name="CTPhieuNhaps" EntityType="CarShopModel.CTPhieuNhap" />
+    <EntitySet Name="HoaDons" EntityType="CarShopModel.HoaDon" />
+    <EntitySet Name="KhachHangs" EntityType="CarShopModel.KhachHang" />
+    <EntitySet Name="LoaiSPs" EntityType="CarShopModel.LoaiSP" />
+    <EntitySet Name="NhaCCs" EntityType="CarShopModel.NhaCC" />
+    <EntitySet Name="PhieuNhaps" EntityType="CarShopModel.PhieuNhap" />
+    <EntitySet Name="Quyens" EntityType="CarShopModel.Quyen" />
+    <EntitySet Name="QuyenAds" EntityType="CarShopModel.QuyenAd" />
+    <EntitySet Name="SanPhams" EntityType="CarShopModel.SanPham" />
+    <EntitySet Name="Tintucs" EntityType="CarShopModel.Tintuc" />
+    <AssociationSet Name="FK__QuyenAd__MaAdmin__52593CB8" Association="CarShopModel.FK__QuyenAd__MaAdmin__52593CB8">
+      <End Role="Admin" EntitySet="Admins" />
+      <End Role="QuyenAd" EntitySet="QuyenAds" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CTHoaDon__MaHD__66603565" Association="CarShopModel.FK__CTHoaDon__MaHD__66603565">
+      <End Role="HoaDon" EntitySet="HoaDons" />
+      <End Role="CTHoaDon" EntitySet="CTHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CTHoaDon__MaSP__6754599E" Association="CarShopModel.FK__CTHoaDon__MaSP__6754599E">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="CTHoaDon" EntitySet="CTHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CTPhieuNha__MaPN__628FA481" Association="CarShopModel.FK__CTPhieuNha__MaPN__628FA481">
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+      <End Role="CTPhieuNhap" EntitySet="CTPhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CTPhieuNha__MaSP__6383C8BA" Association="CarShopModel.FK__CTPhieuNha__MaSP__6383C8BA">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="CTPhieuNhap" EntitySet="CTPhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__MaKH__3A81B327" Association="CarShopModel.FK__HoaDon__MaKH__3A81B327">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SanPham__MaLoaiS__68487DD7" Association="CarShopModel.FK__SanPham__MaLoaiS__68487DD7">
+      <End Role="LoaiSP" EntitySet="LoaiSPs" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuNhap__MaNCC__47DBAE45" Association="CarShopModel.FK__PhieuNhap__MaNCC__47DBAE45">
+      <End Role="NhaCC" EntitySet="NhaCCs" />
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QuyenAd__MaQuyen__534D60F1" Association="CarShopModel.FK__QuyenAd__MaQuyen__534D60F1">
+      <End Role="Quyen" EntitySet="Quyens" />
+      <End Role="QuyenAd" EntitySet="QuyenAds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sheet1__Sheet1_" Association="CarShopModel.FK_Sheet1__Sheet1_">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="SanPham1" EntitySet="SanPhams" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="Admin">
     <Key>
       <PropertyRef Name="MaAdmin" />
     </Key>
-    <Property Name="MaAdmin" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaAdmin" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="UserAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="QuyenAds" Relationship="Self.FK__QuyenAd__MaAdmin__3F466844" FromRole="Admin" ToRole="QuyenAd" />
+    <NavigationProperty Name="QuyenAds" Relationship="CarShopModel.FK__QuyenAd__MaAdmin__52593CB8" FromRole="Admin" ToRole="QuyenAd" />
   </EntityType>
   <EntityType Name="CTHoaDon">
     <Key>
       <PropertyRef Name="MaHD" />
       <PropertyRef Name="MaSP" />
     </Key>
-    <Property Name="MaHD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="MaSP" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MaSP" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="SoLuong" Type="Int32" />
-    <NavigationProperty Name="HoaDon" Relationship="Self.FK__CTHoaDon__MaHD__2F10007B" FromRole="CTHoaDon" ToRole="HoaDon" />
-    <NavigationProperty Name="SanPham" Relationship="Self.FK__CTHoaDon__MaSP__300424B4" FromRole="CTHoaDon" ToRole="SanPham" />
+    <NavigationProperty Name="HoaDon" Relationship="CarShopModel.FK__CTHoaDon__MaHD__66603565" FromRole="CTHoaDon" ToRole="HoaDon" />
+    <NavigationProperty Name="SanPham" Relationship="CarShopModel.FK__CTHoaDon__MaSP__6754599E" FromRole="CTHoaDon" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="CTPhieuNhap">
     <Key>
       <PropertyRef Name="MaPN" />
       <PropertyRef Name="MaSP" />
     </Key>
-    <Property Name="MaPN" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="MaSP" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaPN" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MaSP" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="SoLuong" Type="Int32" />
     <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
-    <NavigationProperty Name="PhieuNhap" Relationship="Self.FK__CTPhieuNha__MaPN__37A5467C" FromRole="CTPhieuNhap" ToRole="PhieuNhap" />
-    <NavigationProperty Name="SanPham" Relationship="Self.FK__CTPhieuNha__MaSP__38996AB5" FromRole="CTPhieuNhap" ToRole="SanPham" />
+    <NavigationProperty Name="PhieuNhap" Relationship="CarShopModel.FK__CTPhieuNha__MaPN__628FA481" FromRole="CTPhieuNhap" ToRole="PhieuNhap" />
+    <NavigationProperty Name="SanPham" Relationship="CarShopModel.FK__CTPhieuNha__MaSP__6383C8BA" FromRole="CTPhieuNhap" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="HoaDon">
     <Key>
       <PropertyRef Name="MaHD" />
     </Key>
-    <Property Name="MaHD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaHD" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="NgayDat" Type="DateTime" Precision="0" />
     <Property Name="NgayShip" Type="DateTime" Precision="0" />
     <Property Name="MaKH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="CTHoaDons" Relationship="Self.FK__CTHoaDon__MaHD__2F10007B" FromRole="HoaDon" ToRole="CTHoaDon" />
-    <NavigationProperty Name="KhachHang" Relationship="Self.FK__HoaDon__MaKH__276EDEB3" FromRole="HoaDon" ToRole="KhachHang" />
+    <NavigationProperty Name="CTHoaDons" Relationship="CarShopModel.FK__CTHoaDon__MaHD__66603565" FromRole="HoaDon" ToRole="CTHoaDon" />
+    <NavigationProperty Name="KhachHang" Relationship="CarShopModel.FK__HoaDon__MaKH__3A81B327" FromRole="HoaDon" ToRole="KhachHang" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>
       <PropertyRef Name="MaKH" />
     </Key>
-    <Property Name="MaKH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaKH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
@@ -58,85 +112,86 @@
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="IsVip" Type="Boolean" />
-    <NavigationProperty Name="HoaDons" Relationship="Self.FK__HoaDon__MaKH__276EDEB3" FromRole="KhachHang" ToRole="HoaDon" />
+    <NavigationProperty Name="HoaDons" Relationship="CarShopModel.FK__HoaDon__MaKH__3A81B327" FromRole="KhachHang" ToRole="HoaDon" />
   </EntityType>
   <EntityType Name="LoaiSP">
     <Key>
       <PropertyRef Name="MaLoaiSP" />
     </Key>
-    <Property Name="MaLoaiSP" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaLoaiSP" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="URLAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="SanPhams" Relationship="Self.FK__SanPham__MaLoaiS__2C3393D0" FromRole="LoaiSP" ToRole="SanPham" />
+    <NavigationProperty Name="SanPhams" Relationship="CarShopModel.FK__SanPham__MaLoaiS__68487DD7" FromRole="LoaiSP" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="NhaCC">
     <Key>
       <PropertyRef Name="MaNCC" />
     </Key>
-    <Property Name="MaNCC" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaNCC" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="TenNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="PhieuNhaps" Relationship="Self.FK__PhieuNhap__MaNCC__34C8D9D1" FromRole="NhaCC" ToRole="PhieuNhap" />
+    <NavigationProperty Name="PhieuNhaps" Relationship="CarShopModel.FK__PhieuNhap__MaNCC__47DBAE45" FromRole="NhaCC" ToRole="PhieuNhap" />
   </EntityType>
   <EntityType Name="PhieuNhap">
     <Key>
       <PropertyRef Name="MaPN" />
     </Key>
-    <Property Name="MaPN" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaPN" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="NgayNhap" Type="DateTime" Precision="0" />
     <Property Name="MaNCC" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="CTPhieuNhaps" Relationship="Self.FK__CTPhieuNha__MaPN__37A5467C" FromRole="PhieuNhap" ToRole="CTPhieuNhap" />
-    <NavigationProperty Name="NhaCC" Relationship="Self.FK__PhieuNhap__MaNCC__34C8D9D1" FromRole="PhieuNhap" ToRole="NhaCC" />
+    <NavigationProperty Name="CTPhieuNhaps" Relationship="CarShopModel.FK__CTPhieuNha__MaPN__628FA481" FromRole="PhieuNhap" ToRole="CTPhieuNhap" />
+    <NavigationProperty Name="NhaCC" Relationship="CarShopModel.FK__PhieuNhap__MaNCC__47DBAE45" FromRole="PhieuNhap" ToRole="NhaCC" />
   </EntityType>
   <EntityType Name="Quyen">
     <Key>
       <PropertyRef Name="MaQuyen" />
     </Key>
-    <Property Name="MaQuyen" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaQuyen" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="QuyenAds" Relationship="Self.FK__QuyenAd__MaQuyen__403A8C7D" FromRole="Quyen" ToRole="QuyenAd" />
+    <NavigationProperty Name="QuyenAds" Relationship="CarShopModel.FK__QuyenAd__MaQuyen__534D60F1" FromRole="Quyen" ToRole="QuyenAd" />
   </EntityType>
   <EntityType Name="QuyenAd">
     <Key>
       <PropertyRef Name="MaAdmin" />
       <PropertyRef Name="MaQuyen" />
     </Key>
-    <Property Name="MaAdmin" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="MaQuyen" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaAdmin" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="MaQuyen" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="GhiChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Admin" Relationship="Self.FK__QuyenAd__MaAdmin__3F466844" FromRole="QuyenAd" ToRole="Admin" />
-    <NavigationProperty Name="Quyen" Relationship="Self.FK__QuyenAd__MaQuyen__403A8C7D" FromRole="QuyenAd" ToRole="Quyen" />
+    <NavigationProperty Name="Admin" Relationship="CarShopModel.FK__QuyenAd__MaAdmin__52593CB8" FromRole="QuyenAd" ToRole="Admin" />
+    <NavigationProperty Name="Quyen" Relationship="CarShopModel.FK__QuyenAd__MaQuyen__534D60F1" FromRole="QuyenAd" ToRole="Quyen" />
   </EntityType>
   <EntityType Name="SanPham">
     <Key>
       <PropertyRef Name="MaSP" />
     </Key>
-    <Property Name="MaSP" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaSP" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="TenSP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="SoLuong" Type="Int32" />
     <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="GiaKm" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="URLAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="MaLoaiSP" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
-    <NavigationProperty Name="CTHoaDons" Relationship="Self.FK__CTHoaDon__MaSP__300424B4" FromRole="SanPham" ToRole="CTHoaDon" />
-    <NavigationProperty Name="CTPhieuNhaps" Relationship="Self.FK__CTPhieuNha__MaSP__38996AB5" FromRole="SanPham" ToRole="CTPhieuNhap" />
-    <NavigationProperty Name="LoaiSP" Relationship="Self.FK__SanPham__MaLoaiS__2C3393D0" FromRole="SanPham" ToRole="LoaiSP" />
+    <NavigationProperty Name="CTHoaDons" Relationship="CarShopModel.FK__CTHoaDon__MaSP__6754599E" FromRole="SanPham" ToRole="CTHoaDon" />
+    <NavigationProperty Name="CTPhieuNhaps" Relationship="CarShopModel.FK__CTPhieuNha__MaSP__6383C8BA" FromRole="SanPham" ToRole="CTPhieuNhap" />
+    <NavigationProperty Name="LoaiSP" Relationship="CarShopModel.FK__SanPham__MaLoaiS__68487DD7" FromRole="SanPham" ToRole="LoaiSP" />
+    <NavigationProperty Name="SanPham1" Relationship="CarShopModel.FK_Sheet1__Sheet1_" FromRole="SanPham" ToRole="SanPham1" />
+    <NavigationProperty Name="SanPham2" Relationship="CarShopModel.FK_Sheet1__Sheet1_" FromRole="SanPham1" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="Tintuc">
     <Key>
       <PropertyRef Name="MaTin" />
     </Key>
-    <Property Name="MaTin" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaTin" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
     <Property Name="URLAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
-  <Association Name="FK__QuyenAd__MaAdmin__3F466844">
-    <End Role="Admin" Type="Self.Admin" Multiplicity="1" />
-    <End Role="QuyenAd" Type="Self.QuyenAd" Multiplicity="*" />
+  <Association Name="FK__QuyenAd__MaAdmin__52593CB8">
+    <End Type="CarShopModel.Admin" Role="Admin" Multiplicity="1" />
+    <End Type="CarShopModel.QuyenAd" Role="QuyenAd" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Admin">
         <PropertyRef Name="MaAdmin" />
@@ -146,9 +201,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CTHoaDon__MaHD__2F10007B">
-    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
-    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+  <Association Name="FK__CTHoaDon__MaHD__66603565">
+    <End Type="CarShopModel.HoaDon" Role="HoaDon" Multiplicity="1" />
+    <End Type="CarShopModel.CTHoaDon" Role="CTHoaDon" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="HoaDon">
         <PropertyRef Name="MaHD" />
@@ -158,9 +213,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CTHoaDon__MaSP__300424B4">
-    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
-    <End Role="CTHoaDon" Type="Self.CTHoaDon" Multiplicity="*" />
+  <Association Name="FK__CTHoaDon__MaSP__6754599E">
+    <End Type="CarShopModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="CarShopModel.CTHoaDon" Role="CTHoaDon" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SanPham">
         <PropertyRef Name="MaSP" />
@@ -170,9 +225,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CTPhieuNha__MaPN__37A5467C">
-    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="1" />
-    <End Role="CTPhieuNhap" Type="Self.CTPhieuNhap" Multiplicity="*" />
+  <Association Name="FK__CTPhieuNha__MaPN__628FA481">
+    <End Type="CarShopModel.PhieuNhap" Role="PhieuNhap" Multiplicity="1" />
+    <End Type="CarShopModel.CTPhieuNhap" Role="CTPhieuNhap" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PhieuNhap">
         <PropertyRef Name="MaPN" />
@@ -182,9 +237,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CTPhieuNha__MaSP__38996AB5">
-    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
-    <End Role="CTPhieuNhap" Type="Self.CTPhieuNhap" Multiplicity="*" />
+  <Association Name="FK__CTPhieuNha__MaSP__6383C8BA">
+    <End Type="CarShopModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="CarShopModel.CTPhieuNhap" Role="CTPhieuNhap" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SanPham">
         <PropertyRef Name="MaSP" />
@@ -194,11 +249,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDon__MaKH__276EDEB3">
-    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="0..1">
+  <Association Name="FK__HoaDon__MaKH__3A81B327">
+    <End Type="CarShopModel.KhachHang" Role="KhachHang" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <End Type="CarShopModel.HoaDon" Role="HoaDon" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="KhachHang">
         <PropertyRef Name="MaKH" />
@@ -208,11 +263,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SanPham__MaLoaiS__2C3393D0">
-    <End Role="LoaiSP" Type="Self.LoaiSP" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+  <Association Name="FK__SanPham__MaLoaiS__68487DD7">
+    <End Type="CarShopModel.LoaiSP" Role="LoaiSP" Multiplicity="0..1" />
+    <End Type="CarShopModel.SanPham" Role="SanPham" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoaiSP">
         <PropertyRef Name="MaLoaiSP" />
@@ -222,11 +275,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PhieuNhap__MaNCC__34C8D9D1">
-    <End Role="NhaCC" Type="Self.NhaCC" Multiplicity="0..1">
+  <Association Name="FK__PhieuNhap__MaNCC__47DBAE45">
+    <End Type="CarShopModel.NhaCC" Role="NhaCC" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="*" />
+    <End Type="CarShopModel.PhieuNhap" Role="PhieuNhap" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhaCC">
         <PropertyRef Name="MaNCC" />
@@ -236,9 +289,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__QuyenAd__MaQuyen__403A8C7D">
-    <End Role="Quyen" Type="Self.Quyen" Multiplicity="1" />
-    <End Role="QuyenAd" Type="Self.QuyenAd" Multiplicity="*" />
+  <Association Name="FK__QuyenAd__MaQuyen__534D60F1">
+    <End Type="CarShopModel.Quyen" Role="Quyen" Multiplicity="1" />
+    <End Type="CarShopModel.QuyenAd" Role="QuyenAd" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Quyen">
         <PropertyRef Name="MaQuyen" />
@@ -248,54 +301,16 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="CarShopEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Admins" EntityType="Self.Admin" />
-    <EntitySet Name="CTHoaDons" EntityType="Self.CTHoaDon" />
-    <EntitySet Name="CTPhieuNhaps" EntityType="Self.CTPhieuNhap" />
-    <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
-    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
-    <EntitySet Name="LoaiSPs" EntityType="Self.LoaiSP" />
-    <EntitySet Name="NhaCCs" EntityType="Self.NhaCC" />
-    <EntitySet Name="PhieuNhaps" EntityType="Self.PhieuNhap" />
-    <EntitySet Name="Quyens" EntityType="Self.Quyen" />
-    <EntitySet Name="QuyenAds" EntityType="Self.QuyenAd" />
-    <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
-    <EntitySet Name="Tintucs" EntityType="Self.Tintuc" />
-    <AssociationSet Name="FK__QuyenAd__MaAdmin__3F466844" Association="Self.FK__QuyenAd__MaAdmin__3F466844">
-      <End Role="Admin" EntitySet="Admins" />
-      <End Role="QuyenAd" EntitySet="QuyenAds" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CTHoaDon__MaHD__2F10007B" Association="Self.FK__CTHoaDon__MaHD__2F10007B">
-      <End Role="HoaDon" EntitySet="HoaDons" />
-      <End Role="CTHoaDon" EntitySet="CTHoaDons" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CTHoaDon__MaSP__300424B4" Association="Self.FK__CTHoaDon__MaSP__300424B4">
-      <End Role="SanPham" EntitySet="SanPhams" />
-      <End Role="CTHoaDon" EntitySet="CTHoaDons" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CTPhieuNha__MaPN__37A5467C" Association="Self.FK__CTPhieuNha__MaPN__37A5467C">
-      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
-      <End Role="CTPhieuNhap" EntitySet="CTPhieuNhaps" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CTPhieuNha__MaSP__38996AB5" Association="Self.FK__CTPhieuNha__MaSP__38996AB5">
-      <End Role="SanPham" EntitySet="SanPhams" />
-      <End Role="CTPhieuNhap" EntitySet="CTPhieuNhaps" />
-    </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__MaKH__276EDEB3" Association="Self.FK__HoaDon__MaKH__276EDEB3">
-      <End Role="KhachHang" EntitySet="KhachHangs" />
-      <End Role="HoaDon" EntitySet="HoaDons" />
-    </AssociationSet>
-    <AssociationSet Name="FK__SanPham__MaLoaiS__2C3393D0" Association="Self.FK__SanPham__MaLoaiS__2C3393D0">
-      <End Role="LoaiSP" EntitySet="LoaiSPs" />
-      <End Role="SanPham" EntitySet="SanPhams" />
-    </AssociationSet>
-    <AssociationSet Name="FK__PhieuNhap__MaNCC__34C8D9D1" Association="Self.FK__PhieuNhap__MaNCC__34C8D9D1">
-      <End Role="NhaCC" EntitySet="NhaCCs" />
-      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
-    </AssociationSet>
-    <AssociationSet Name="FK__QuyenAd__MaQuyen__403A8C7D" Association="Self.FK__QuyenAd__MaQuyen__403A8C7D">
-      <End Role="Quyen" EntitySet="Quyens" />
-      <End Role="QuyenAd" EntitySet="QuyenAds" />
-    </AssociationSet>
-  </EntityContainer>
+  <Association Name="FK_Sheet1__Sheet1_">
+    <End Type="CarShopModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="CarShopModel.SanPham" Role="SanPham1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="SanPham1">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

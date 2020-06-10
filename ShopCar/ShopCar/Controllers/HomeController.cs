@@ -22,6 +22,35 @@ namespace ShopCar.Controllers
 
             return View();
         }
+        
+        [ChildActionOnly]
+        public ActionResult MenuPartial()
+        {
+            var lstLoaiSP = db.LoaiSPs;
+            return View(lstLoaiSP);
+        }
 
+        [HttpGet]
+        public ActionResult DangNhap()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult DangNhap(string txtTenDangNhap,string txtMatKhau)
+        {
+            KhachHang tv1 = db.KhachHangs.SingleOrDefault(x => x.UserName == txtTenDangNhap && x.Pass == txtMatKhau);
+            if (tv1 != null)
+            {
+                Session["TaiKhoan"] = tv1;
+                return Content("<script>window.location.reload();</script>");
+            }
+            return Content("<script>alert('Sai tài khoản hoặc mật khẩu')</script>");
+        }
+        public ActionResult DangXuat()
+        {
+            Session["TaiKhoan"] = null;
+            return RedirectToAction("Index");
+        }
+        
     }
 }

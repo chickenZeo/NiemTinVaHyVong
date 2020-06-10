@@ -9,6 +9,7 @@ namespace ShopCar.Controllers
     public class SanPhamController : Controller
     {
         // GET: SanPham
+        [ChildActionOnly]
         public ActionResult SanPhamPartial()
         {
             return PartialView();
