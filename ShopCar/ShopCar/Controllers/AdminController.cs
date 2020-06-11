@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebsiteBanHang.Controllers
+namespace ShopCar.Controllers
 {
     public class AdminController : Controller
     {

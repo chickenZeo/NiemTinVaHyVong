@@ -234,3 +234,7 @@ E:\Công Nghệ Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csproj.Cor
 E:\Công Nghệ Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csproj.CopyComplete
 E:\Công Nghệ Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.dll
 E:\Công Nghệ Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.pdb
+E:\Document\Kì 2 năm 3\CN Web\Project\NiemTinVaHyVong\ShopCar\ShopCar\bin\PagedList.dll
+E:\Document\Kì 2 năm 3\CN Web\Project\NiemTinVaHyVong\ShopCar\ShopCar\bin\PagedList.Mvc.dll
+E:\Document\Kì 2 năm 3\CN Web\Project\NiemTinVaHyVong\ShopCar\ShopCar\bin\PagedList.xml
+E:\Document\Kì 2 năm 3\CN Web\Project\NiemTinVaHyVong\ShopCar\ShopCar\bin\PagedList.Mvc.xml
