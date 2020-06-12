@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
+using CaptchaMvc.HtmlHelpers;
 using ShopCar.Model;
 
 namespace ShopCar.Controllers
@@ -24,33 +26,76 @@ namespace ShopCar.Controllers
         }
         
         [ChildActionOnly]
+        [HttpGet]
         public ActionResult MenuPartial()
         {
-            var lstLoaiSP = db.LoaiSPs;
-            return View(lstLoaiSP);
-        }
-
-        [HttpGet]
-        public ActionResult DangNhap()
-        {
+            ViewBag.lstLoaiSP = new SelectList(db.LoaiSPs, "MaLoaiSP", "TenLoai");
             return View();
         }
+        //[ChildActionOnly]
+        //[HttpPost]
+        //public ActionResult MenuPartial(LoaiSP Lsp)
+        //{
+        //    ViewBag.lstLoaiSP = new SelectList(db.LoaiSPs, "MaLoaiSP", "TenLoai");
+        //    return View(Lsp);
+        //}
+
         [HttpPost]
-        public ActionResult DangNhap(string txtTenDangNhap,string txtMatKhau)
+        public ActionResult DangNhap(FormCollection f /*string txtTenDangNhap, string txtMatKhau*/)
         {
-            KhachHang tv1 = db.KhachHangs.SingleOrDefault(x => x.UserName == txtTenDangNhap && x.Pass == txtMatKhau);
-            if (tv1 != null)
+            string TenTK = f["txtTenDangNhap"].ToString();
+            string MatKhau = f["txtMatKhau"].ToString();
+            KhachHang kh = db.KhachHangs.SingleOrDefault(x => x.UserName == TenTK && x.Pass == MatKhau);
+
+            if (kh != null)
             {
-                Session["TaiKhoan"] = tv1;
-                return Content("<script>window.location.reload();</script>");
+                Session["TaiKhoan"] = kh;
+                //return RedirectToAction("Index");
+                return RedirectToAction("Index");
             }
-            return Content("<script>alert('Sai tài khoản hoặc mật khẩu')</script>");
+            return RedirectToAction("ThongBao");
+
+            //return RedirectToAction("Index");<script>alert('Sai tài khoản hoặc mật khẩu')</script>
         }
         public ActionResult DangXuat()
         {
             Session["TaiKhoan"] = null;
             return RedirectToAction("Index");
         }
-        
+        [HttpGet]
+        public ActionResult DangKy()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult DangKy(KhachHang kh)
+        {
+            
+            if (this.IsCaptchaValid("Captcha is not valid"))
+            {
+                if (ModelState.IsValid)
+                {
+                    var kh1 = db.KhachHangs.Where(x => x.UserName == kh.UserName);
+
+                    if(kh1!=null)
+                    {
+                        ViewBag.ThongBao = "tài khoản đã tồn tại";
+                        return View();
+                    }    
+                    ViewBag.ThongBao = "Thêm Thành công";
+                    db.KhachHangs.Add(kh);
+                    db.SaveChanges();
+                }
+                else
+                    ViewBag.ThongBao = "Thêm Thất bại";
+                return View();
+            }
+            ViewBag.ThongBao = "Sai mã captcha";
+            return View();
+        }
+        public ActionResult ThongBao()
+        {
+            return View();
+        }
     }
 }

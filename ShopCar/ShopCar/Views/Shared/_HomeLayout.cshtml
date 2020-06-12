@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/Content/assets/css/plugins.css">
     <link rel="stylesheet" href="~/Content/assets/css/style.css">
     <link rel="stylesheet" href="~/Content/assets/css/style1.css">
     <script src="~/Content/assets/js/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -35,28 +37,19 @@
                             <ul>
                                 <li><a href="login.html">Đăng ký</a></li>
                                 <li><a href="login.html">Đăng nhập</a></li>
-                                <li><a href="cart.html">Giỏ hàng</a></li>
-                                <li><a href="checkout.html">Thanh toán</a></li>
+                                <li>@Html.ActionLink("Giỏ hàng", "XemGioHang", "GioHang")
                             </ul>
                         </div>
                         <div class="search_container">
-                            <form action="#">
-                                <div class="hover_category">
-                                    <select class="select_option" name="select" id="categori1">
-                                        <option selected value="1">Tất cả danh mục</option>
-                                        <option value="2">Nột thất</option>
-                                        <option value="3">Động cơ</option>
-                                        <option value="4">Phụ kiện</option>
-                                        <option value="5">Thiết bị thông minh</option>
-                                        <option value="6">Thân xe</option>
-                                        <option value="7">Đèn</option>
-                                    </select>
-                                </div>
-                                <div class="search_box">
-                                    <input placeholder="Tìm kiếm sản phẩm..." type="text">
-                                    <button type="submit">Tìm kiếm</button>
-                                </div>
-                            </form>
+                            @Html.Action("MenuPartial", "Home")
+                            @*@using (Html.BeginForm("LayTuKhoaTimKiem", "TimKiem"))
+                                {
+                                    @Html.Action("MenuPartial", "Home")
+                                    <div class="search_box">
+                                        <input type="text" name="sTuKhoa" placeholder="Nhập tên sản phẩm">
+                                        <button type="submit">Tìm kiếm</button>
+                                    </div>
+                                }*@
                         </div>
                         <div class="header_configure_area">
                             <div class="header_wishlist">
@@ -65,70 +58,15 @@
                                     <span class="wishlist_count">3</span>
                                 </a>
                             </div>
-                            <div class="mini_cart_wrapper">
-                                <a href="javascript:void(0)">
-                                    <i class="icon-shopping-bag2"></i>
-                                    <span class="cart_price">$152.00 <i class="ion-ios-arrow-down"></i></span>
-                                    <span class="cart_count">2</span>
-                                </a>
-                                mini cart
-                                <div class="mini_cart">
-                                    <div class="mini_cart_inner">
-                                        <div class="cart_item">
-                                            <div class="cart_img">
-                                                <a href="#"><img src="../images/s-product/product.jpg" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">Fusce Aliquam</a>
-                                                <p>Số lượng: 1 X <span> $60.00 </span></p>
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a href="#"><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="cart_item">
-                                            <div class="cart_img">
-                                                <a href="#"><img src="../images/s-product/product2.jpg" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">Ras Neque Metus</a>
-                                                <p>Số lượng: 1 X <span> $60.00 </span></p>
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a href="#"><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="mini_cart_table">
-                                            <div class="cart_total">
-                                                <span>Phụ thu:</span>
-                                                <span class="price">$0</span>
-                                            </div>
-                                            <div class="cart_total mt-10">
-                                                <span>Tổng:</span>
-                                                <span class="price">$138.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mini_cart_footer">
-                                        <div class="cart_button">
-                                            <a href="cart.html">Đến giỏ hàng</a>
-                                        </div>
-                                        <div class="cart_button">
-                                            <a href="checkout.html">Thanh toán</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                mini cart end
-                            </div>
+                            @Html.Action("GioHangPartial", "GioHang")
                         </div>
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
                                 <li class="menu-item-has-children active">
-                                    <a href="#">Home</a>
+                                    @Html.ActionLink("Trang chủ", "Index", "Home")
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Shop</a>
+                                    @Html.ActionLink("Sản phẩm", "DachSachSanPham", "SanPham")
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="my-account.html">Tài khoản của tôi</a>
@@ -156,179 +94,84 @@
             </div>
         </div>
     </div>
-    @*offcanvas menu area end*@
-    @*<header>
 
-        @Html.Partial("~/Views/Shared/HeaderTopPartial.cshtml")
-    </header>*@
     <header>
-            <div class="main_header">
-                @Html.Partial("HeaderTopPartial")
-                @*<div class="header_top">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-12 col-md-7">
-                                <div class="header_top_links text-right">
-                                    <ul>
-                                        <li><a href="Home.html">Đăng ký</a></li>
-                                        <li><a href="Login.html">đăng nhập</a></li>
-                                        <li><a href="cart.html">giỏ hàng</a></li>
-
-                                    </ul>
-                                </div>
+        <div class="main_header">
+            @Html.Partial("HeaderTopPartial")
+            <div class="header_middle">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="@Url.Action("Index","Home")">
+                                    <h1 style=" color: #D23A3A; display: inline">G</h1>
+                                    <h1 style=" color:#FFFFFF ; display : inline; padding-right: 10px">15</h1>
+                                    <h1 style=" color: #FFFFFF; display: inline">Auto</h1>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>*@
-                <div class="header_middle">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <h1 style=" color: #D23A3A; display: inline">G</h1>
-                                        <h1 style=" color:#FFFFFF ; display : inline; padding-right: 10px">15</h1>
-                                        <h1 style=" color: #FFFFFF; display: inline">Auto</h1>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-10">
-                                <div class="header_right_box">
-                                    <div class="search_container">
-                                        <form action="#">
-                                            @Html.Action("MenuPartial","Home")
-                                            @*<div class="hover_category">
-                                                <select class="select_option" name="select" id="categori2">
-                                                    <option selected value="1">Tất cả danh mục</option>
-                                                    <option value="nmada">Nột thất</option>
-                                                    <option value="3">Động cơ</option>
-                                                    <option value="4">Phụ kiện</option>
-                                                    <option value="5">Thiết bị thông minh</option>
-                                                    <option value="6">Thân xe</option>
-                                                    <option value="7">Đèn</option>
-                                                </select>
-                                            </div>*@
+                        <div class="col-lg-10">
+                            <div class="header_right_box">
+                                <div class="search_container">
+                                    @Html.Action("MenuPartial", "Home")
+                                    @*@using (Html.BeginForm("LayTuKhoaTimKiem", "TimKiem"))
+                                        {
+
                                             <div class="search_box">
-                                                <input placeholder="Tìm kiếm sản phẩm..." type="text">
+                                                <input type="text" name="sTuKhoa" placeholder="Nhập tên sản phẩm">
                                                 <button type="submit">Tìm kiếm</button>
                                             </div>
-                                        </form>
-                                    </div>
-                                    <div class="header_configure_area">
-                                        <div class="header_wishlist">
-                                            <a href="wishlist.html">
-                                                <i class="icon-heart"></i>
-                                                <span class="wishlist_count">3</span>
-                                            </a>
-                                        </div>
-                                        <div class="mini_cart_wrapper">
-                                            <a href="javascript:void(0)">
-                                                <i class="icon-shopping-bag2"></i>
-                                                <span class="cart_price">$152.00 <i class="ion-ios-arrow-down"></i></span>
-                                                <span class="cart_count">2</span>
-                                            </a>
-                                            <div class="mini_cart">
-                                                <div class="mini_cart_inner">
-                                                    <div class="cart_item">
-                                                        <div class="cart_img">
-                                                            <a href="#"><img src="../images/s-product/product.jpg" alt=""></a>
-                                                        </div>
-                                                        <div class="cart_info">
-                                                            <a href="#">Fusce Aliquam</a>
-                                                            <p>Số lượng: 1 X <span> $60.00 </span></p>
-                                                        </div>
-                                                        <div class="cart_remove">
-                                                            <a href="#"><i class="ion-android-close"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="cart_item">
-                                                        <div class="cart_img">
-                                                            <a href="#"><img src="../images/s-product/product2.jpg" alt=""></a>
-                                                        </div>
-                                                        <div class="cart_info">
-                                                            <a href="#">Ras Neque Metus</a>
-                                                            <p>Số lượng: 1 X <span> $60.00 </span></p>
-                                                        </div>
-                                                        <div class="cart_remove">
-                                                            <a href="#"><i class="ion-android-close"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mini_cart_table">
-                                                        <div class="cart_total">
-                                                            <span>Phụ thu:</span>
-                                                            <span class="price">$0</span>
-                                                        </div>
-                                                        <div class="cart_total mt-10">
-                                                            <span>Tổng:</span>
-                                                            <span class="price">$138.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mini_cart_footer">
-                                                    <div class="cart_button">
-                                                        <a href="cart.html">Đến giỏ hàng</a>
-                                                    </div>
-                                                    <div class="cart_button">
-                                                        <a href="checkout.html">Thanh toán</a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        }*@
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header_bottom sticky-header">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="main_menu menu_position text-left">
-                                    <nav>
-                                        <ul>
-                                            <li><a class="active" href="Home.html">Trang chủ</a></li>
-                                            <li class="mega_items"><a href="product.html">Sản phẩm </a>
-                                            <li><a href="#">Về chúng tôi</a></li>
-                                            <li><a href="#"> Liên hệ</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="call_support text-right">
-                                    <p><i class="icon-phone-call" aria-hidden="true"></i> <span>Hotline: <a href="tel:0123456789">0123456789</a></span></p>
-
+                                <div class="header_configure_area">
+                                    <div class="header_wishlist">
+                                        <a href="wishlist.html">
+                                            <i class="icon-heart"></i>
+                                            <span class="wishlist_count">3</span>
+                                        </a>
+                                    </div>
+                                    @Html.Action("GioHangPartial", "GioHang")
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-    <div class="owl-item active" style="width: 100%;">
-        <div class="single_slider d-flex align-items-center" style="background-image: url(/Content/assets/img/slider/slider5.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="slider_content" style="color:#ffff;">
+            <div class="header_bottom sticky-header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="main_menu menu_position text-left">
+                                <nav>
+                                    <ul>
+                                        <li><a class="active" href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                                        <li class="mega_items">@Html.ActionLink("Sản phẩm", "DanhSachSanPham", "SanPham")
+                                        <li><a href="#">Về chúng tôi</a></li>
+                                        <li><a href="#"> Liên hệ</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="call_support text-right">
+                                <p><i class="icon-phone-call" aria-hidden="true"></i> <span>Hotline: <a href="tel:0123456789">0123456789</a></span></p>
 
-                            <h1>WELCOME TO G15 AUTO</h1>
-                            <h2>MUA HÀNG <span>THEO CÁCH CỦA BẠN</span></h2>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </header>
     @RenderBody()
+
+    <script src="~/Content/assets/js/plugins.js"></script>
+    <script src="~/Content/assets/js/main.js"></script>
 
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-md-4 text-left">
                     <h3>GIỚI THIỆU</h3>
                     <a href=""><i class="fa fa-angle-right">Về chúng tôi</i></a><br>
                     <a href=""><i class="fa fa-angle-right">Cam kết chất lượng</i></a><br>
@@ -337,7 +180,7 @@
                     <a href=""><i class="fa fa-angle-right">Vận chuyển và thanh toán</i></a><br>
                     <a href=""><i class="fa fa-angle-right">Chính sách bảo hành</i></a><br>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4 text-left">
                     <h3>THÔNG TIN LIÊN HỆ</h3>
                     <a href=""><i class="fa fa-windows icon"></i>  Tên công ty</a><br>
                     <a href=""><i class="fa fa-map-marker icon"></i>  Địa chỉ</i></a><br>
@@ -345,23 +188,15 @@
                     <a href=""><i class="fa fa-globe icon"></i>  Tên trang web</a><br>
                     <a href=""><i class="fa fa-envelope icon"></i>  Email</a><br>
                 </div>
-                <div class="col-4 icon">
+                <div class="col-md-4 icon text-left">
                     <i class="fa fa-facebook-square" aria-hidden="true"></i>
                     <i class="fa fa-twitter-square" aria-hidden="true"></i>
                     <i class="fa fa-google-plus-square" aria-hidden="true"></i>
-                    <h4>All buiding by mr.Quan</h4>
+                    <h4 style="margin:15px 0;">All buiding by <span style="color:red">G15 AUTO</span></h4>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="col-6 icon">
-
-            </div>
-
-        </div>
     </footer>
     <!--footer-->
-
 </body>
-
 </html>
