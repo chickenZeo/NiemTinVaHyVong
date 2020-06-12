@@ -314,3 +314,37 @@ G:\TTNhom\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csproj.CoreCompileIn
 G:\TTNhom\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csproj.CopyComplete
 G:\TTNhom\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.dll
 G:\TTNhom\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.pdb
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\ShopCar.dll.config
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\ShopCar.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\ShopCar.pdb
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\Antlr3.Runtime.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\EntityFramework.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\EntityFramework.SqlServer.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\Microsoft.Web.Infrastructure.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\Newtonsoft.Json.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.Helpers.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.Mvc.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.Optimization.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.Razor.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.WebPages.Deployment.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.WebPages.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.WebPages.Razor.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\WebGrease.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\EntityFramework.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\EntityFramework.SqlServer.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.Helpers.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.Mvc.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.Optimization.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.Razor.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.WebPages.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.WebPages.Deployment.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\System.Web.WebPages.Razor.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\Newtonsoft.Json.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\Antlr3.Runtime.pdb
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csprojAssemblyReference.cache
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csproj.CoreCompileInputs.cache
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.csproj.CopyComplete
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.dll
+D:\IT\Ki2-nam3\Cong nghe Web\NiemTinVaHyVong\ShopCar\ShopCar\obj\Debug\ShopCar.pdb
