@@ -26,8 +26,9 @@ namespace ShopCar.Controllers
         [ChildActionOnly]
         public ActionResult MenuPartial()
         {
-            var lstLoaiSP = db.LoaiSPs;
-            return View(lstLoaiSP);
+            //  var lstLoaiSP = db.LoaiSPs;
+            // return View(lstLoaiSP);
+            return View(db.LoaiSPs.ToList());
         }
 
         [HttpGet]
